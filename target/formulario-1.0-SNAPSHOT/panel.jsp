@@ -1,0 +1,129 @@
+<%-- 
+    Document   : panel
+    Created on : 16/11/2024, 11:45:05 p. m.
+    Author     : acer
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <% 
+            if (session.getAttribute("usuario") == null){
+                response.sendRedirect("index.html");
+                return;
+            }
+        %>
+     
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FerreVentas | inicio</title>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    <!--css-->
+    <link rel="stylesheet" href="/estilos/styleprincipal.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="barra_negra">
+                <h2>FERREVENTAS</h2>
+                <button type="button" class="btn" aria-label="Close" id="btn"><i class="fa-solid fa-right-from-bracket" id="icons_salir"></i></button>
+            </div>
+            
+            <nav class="nav">
+                <div id="navegador">
+                    <a class="nav-link active" id="inicio"       aria-current="page" href="#"><i class="fa-solid fa-house" id="inicio"></i> INICIO</a>
+                    <a class="nav-link active" id="empleados"    aria-current="page" href="#"><i class="fa-solid fa-users" id="empleados"></i>EMPLEADOS</a>
+                    <a class="nav-link active" id="clientes"     aria-current="page" href="#"><i class="fa-solid fa-users" id="clientes"></i> CLIENTES </a>
+                    <a class="nav-link acitve" id ="proveedores" aria-current="page" href="#"><i class="fa-sharp fa-solid fa-clipboard" id ="proveedores"></i> PROVEEDORES </a>
+                    <a class="nav-link active" id="productos"    aria-current="page" href="#"><i class="fa-solid fa-cube" id="productos" ></i> PRODUCTOS </a>
+                    <a class="nav-link active" id="ventas"       aria-current="page" href="#"><i class="fa-solid fa-file-invoice" id="ventas"></i> VENTAS</a>
+
+                </div>
+
+              </nav>
+        </header>
+        <main>
+            <div class="panel_general">
+                <div class="panel_control">
+                    <h2>PANEL DE CONTROL</h2>
+                </div>
+                <div class="iconos">
+                    <div class="icontex">
+                        <i class="fa-solid fa-users" id="icono_empleado"></i>
+                        <h5>empleados</h5>
+                    </div>
+
+                    <div class="icontex">
+                        <i class="fa-solid fa-users" id="icono_cliente"></i>
+                        <h5>clientes</h5>
+                    </div>
+
+                    <div class="icontex">
+                        <i class="fa-sharp fa-solid fa-clipboard " id="icono_proveedor"></i>
+                        <h5>proveedores</h5>
+                    </div>
+
+                    <div class="icontex">
+                        <i class="fa-solid fa-cube" id="icono_producto"></i>
+                        <h5>productos</h5>
+                    </div>
+
+                    <div class="icontex">
+                        <i class="fa-solid fa-file-invoice" id="icono_venta"></i>
+                        <h5>ventas</h5>
+                    </div>
+                </div>
+            </div>
+            <div id="img_empleados">
+                <p id="">aqui se mostrara la lista de empleados con las opciones de agregar nuevo empleado, editar o eliminar este mismo.
+                    se presenta en imagen ya que se tomaran los datos y mostrara la lista traida de java
+                </p>
+                <img  src="/assets/img-lista empleados.png" alt="lista de empleados">
+            </div>
+
+            <div id="igm_clientes">
+                <p>aqui se mostrara la lista de clientes con las opciones de agregar nuevo cliente, editar o eliminar este mismo.
+                    se presenta en imagen ya que se tomaran los datos y mostrara la lista traida de base de datos</p>
+                <img src="/assets/img-lista-clientes.png" alt="lista de clientes">
+            </div>
+
+            <div id="igm_proveedores">
+                <p>aqui se mostrara la lista de proveedores con las opciones de agregar nuevo proveedor, editar o eliminar este mismo.
+                    se presenta en imagen ya que se tomaran los datos y mostrara la lista traida de base de datos</p>
+                <img src="/assets/img-lista-proveedores.png" alt="lista de proveedores">
+            </div>
+
+            <div id="igm_productos">
+                <p>aqui se mostrara la lista de productos con las opciones de agregar nuevo producto, editar o eliminar este mismo.
+                    se presenta en imagen ya que se tomaran los datos y mostrara la lista traida de la base de datos</p>
+                <img src="/assets/img-lista-productos.png" alt="lista de productos">
+            </div>
+
+            <div id="igm_ventas">
+                <p>aqui se mostrara la lista de ventas con las opciones de agregar, editar y ver una nueva venta.
+                    se presenta en imagen ya que se tomaran los datos y mostrara la lista traida de la base de datos</p>
+                <img src="/assets/img-lista-ventas.png" alt="lista de ventas">
+            </div>
+
+        </main>
+    </div>
+    <!--<script src="/script.js"></script> -->
+</body>
+</html>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="/estilos/style.css">-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --color-primario: #16423C;
+    --color-secundario: #6A9C89;
+    --color-terciario: #C4DAD2;
+    --color-cuartario: #E9EFEC;
+    --color-fover: #E7FBE6;
+
+    --fuente-inter:"Inter", sans-serif;
+    --fuente-IBM-Plex-Sans:"IBM Plex Sans", sans-serif;
+
+}
+*{   /*declara una clase universal y usa margin y padding para quitar los estilos predeterminados css de los navegadores y pueda verse lo mismo en todos los navegadores */
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: var(--color-primario);
+    color: var(--color-cuartario);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    box-sizing: border-box;
+    font-family: var(--fuente-IBM-Plex-Sans);
+    font-size: 2rem;   
+}
+
+body{
+    height: 100vh; /*para ocupar el 100% de toda la pantalla*/
+    box-sizing: border-box; /* box-sizing es responsable de cómo se calculan el ancho y el alto totales de un elemento.*/
+    background-color: var(--color-secundario);
+}
+
+.header_imglogo{
+    width: 40px;
+}
+
+.contenedor-inputs{
+    
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    
+
+}
+
+.formulario{
+    background-color:#adcbbe;
+    border-radius: 8px;
+    width: 490px;
+    height: 300px;
+    text-align: center;
+    margin-top: 50px;
+    box-sizing: border-box;
+
+}
+
+.input{
+    
+    width: 390px;
+    height: 50px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.5rem;
+    
+}
+
+.olivido_contraseña{
+    font-size: 1.2rem;
+    margin-top: 5px;
+    text-decoration: none;
+    
+}
+
+.boton{
+    width: 250px;  /* Ancho del botón */
+    height: 50px;  /* largo del botón */
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: var(--fuente-inter);
+    font-weight: bold;
+    font-size: 1.9rem;
+    background-color: #16423C;
+
+}
+
+
+.boton:hover{
+    color: var(--color-fover)
+}
+
+footer{
+    min-height: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3rem;
+    background-color: var(--color-terciario);
+    color:black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+
+}
+
+    </style>
+    <title>FerreVentas | login</title>
+</head>
+<header class="header">
+    <img  class="header_imglogo" src="imgs/logo empresa.png" alt="">
+    <h1 class="titulo">FERREVENTAS</h1>
+</header>
+<body>
+    <main>
+        <div class="contenedor-inputs"> 
+            <form class="formulario" action="login" method="post"> <!--elementospara hacer formalente formularios-->
+                <h2 class="text_inicio_sesion">Iniciar sesion</h2>
+                
+                    <!--<label for="nombre"></label>-->
+                    <input class="input" placeholder="Usuario" type="text" name="usuario" /><br><br>
+                
+                
+                    <!--<label for="contraseña"></label>-->
+                    <input class="input" placeholder="Contraseña" type="password" name="contraseña" />
+
+                    <div class="olivido_contraseña">
+                        <a href="https://es-la.facebook.com/">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="botondiv">
+                        <input class="boton" type="submit" value="Entrar" />
+                        <!--<button class="boton" type="submit" onclick="">Entrar</button>-->
+    
+                </div>
+            </form>
+
+        </div>
+       
+    </main>
+    
+</body>
+<footer class="footer"><strong> &copy; House Tecnology | solucion tecnologica </strong></footer> <!--para hacer el simbolo copyright tambien precionar atl + los numero 0169-->
+<!-- <script src="app.js/app.js"></script>-->
+</html>
